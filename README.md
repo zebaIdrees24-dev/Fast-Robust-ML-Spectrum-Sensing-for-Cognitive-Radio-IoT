@@ -4,9 +4,11 @@ A reproducible **Machine Learning, statistical signal processing, and Cognitive-
 
 The project combines **complex I/Q signal processing, Energy Detection, Maximum-Minimum Eigenvalue (MME) sensing, Ledoit-Wolf robust covariance estimation, PCA/Lanczos dominant-component analysis, statistical feature engineering, Random Forest, and HistGradientBoosting** within a modular Python research implementation.
 
-The work is inspired by:
+This repository is based on my published research:
 
 **Z. Idrees et al., “Fast and Robust Spectrum Sensing for Cognitive Radio Enabled IoT,” IEEE Access, 2021.**
+
+The repository translates the core research methodology into a reproducible Python implementation and extends it with robust covariance estimation, feature engineering, and supervised machine-learning workflows for Cognitive-Radio IoT spectrum sensing.
 
 ---
 
