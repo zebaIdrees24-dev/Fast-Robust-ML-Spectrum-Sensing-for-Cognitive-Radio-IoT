@@ -667,7 +667,6 @@ Fast-Robust-ML-Spectrum-Sensing-for-Cognitive-Radio-IoT/
 │
 ├── .gitignore
 ├── Dockerfile
-├── LICENSE
 ├── pyproject.toml
 └── README.md
 ```
@@ -1028,11 +1027,16 @@ Potential applications include:
 
 ---
 
-# License
+## Usage and Attribution
 
-This project is released under the repository's included license.
+This repository is provided for research, educational, and portfolio
+demonstration purposes.
 
-See the `LICENSE` file for details.
+The project reflects collaborative research and engineering work, together
+with subsequent implementation and development. Relevant publications and
+research contributions are acknowledged in the references below.
+
+No open-source license is currently granted for this repository.
 
 ---
 
