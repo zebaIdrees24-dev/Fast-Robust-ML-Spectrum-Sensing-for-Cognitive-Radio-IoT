@@ -1,9 +1,27 @@
-Fast-Robust-ML-Spectrum-Sensing-for-Cognitive-Radio-IoT
+# Fast and Robust Spectrum Sensing for Cognitive-Radio IoT
 
-Machine-learning-enhanced spectrum-sensing system for Cognitive Radio IoT (CR-IoT) designed to detect primary-user activity under challenging low-SNR, noise-uncertain, and interference-prone wireless conditions. The project processes complex I/Q RF signals and combines robust statistical signal processing with supervised machine learning for spectrum-occupancy classification.
+Python/ML research implementation inspired by Idrees et al., *Fast and Robust Spectrum Sensing for Cognitive Radio Enabled IoT* (IEEE Access, 2021).
 
-It implements Energy Detection, MME, PCA/Lanczos-based sensing, Ledoit-Wolf covariance estimation, Random Forest, and HistGradientBoosting, with engineered features including covariance eigenvalues, eigen-spectrum entropy, power statistics, quantiles, and autocorrelation.
+Included:
 
-Models are evaluated using Pd/Pfa, accuracy, precision, recall, F1-score, ROC-AUC, SNR sweeps, and comparative benchmarking across simulated operating conditions from −25 to −5 dB SNR.
+- synthetic low-SNR complex-IQ data with noise uncertainty and impulsive interference;
+- energy and MME baselines;
+- fast robust PC detector using Ledoit-Wolf covariance shrinkage and restarted Lanczos dominant components;
+- eigen-spectrum, entropy, power-quantile and autocorrelation features;
+- Random Forest and HistGradientBoosting classifiers;
+- stratified evaluation with accuracy, precision, recall, F1 and ROC-AUC;
+- model persistence, tests, and a five-layer CR-IoT architecture map.
 
-Tools & Technologies: Python, NumPy, SciPy, pandas, scikit-learn, ARPACK/Lanczos, Ledoit-Wolf covariance estimation, Random Forest, HistGradientBoosting, joblib, Jupyter, pytest, Docker, Git, and GitHub Actions.
+```bash
+python -m venv .venv
+python -m pip install -e ".[dev,plot]"
+pytest -q
+cr-iot-sensing --per-class 400 --samples 512
+```
+
+## Reproducibility boundary
+
+The paper reports experimental wireless-microphone/USRP evaluation, but the linked record does not provide the raw IQ dataset or reference source code. The robust covariance and supervised classifiers in this repository are transparent engineering extensions, **not claims of verbatim reproduction**. Replace the generator with governed `.npy` complex-IQ captures and match the paper's acquisition parameters for experimental comparison.
+
+Paper: https://doi.org/10.1109/ACCESS.2021.3133336
+
